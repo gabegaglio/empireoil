@@ -122,30 +122,26 @@ const Locations: React.FC = () => {
               key={index}
               className="bg-white/5 backdrop-blur-lg rounded-lg border border-white/10 overflow-hidden group hover:border-white/20 transition-all duration-300"
             >
-              <div className="h-40 bg-gray-800 relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-lg font-bold tracking-wide">
-                    {location.name}
-                  </h3>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <address className="not-italic mb-4 text-gray-300">
+              <div className="p-6 border-b border-white/10">
+                <h3 className="text-lg font-bold tracking-wide mb-2">
+                  {location.name}
+                </h3>
+                <address className="not-italic text-gray-300">
                   {location.address}
                   <br />
                   {location.city}, {location.state} {location.zip}
                   <br />
                   <span className="text-gray-400">{location.phone}</span>
                 </address>
+              </div>
 
-                <div className="mb-4 pb-4 border-b border-white/5">
+              <div className="p-6">
+                <div className="mb-4">
                   <h4 className="text-xs text-gray-500 mb-1">HOURS</h4>
                   <p className="text-sm">{location.hours}</p>
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center pt-2 border-t border-white/5 mt-2">
                   <button className="text-white text-sm inline-flex items-center gap-2 group-hover:text-gray-300 cursor-pointer">
                     GET DIRECTIONS
                     <svg

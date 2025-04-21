@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import logo from "@/assets/mainlogo.svg";
 
 const Header: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      // The scroll handler can be used for other logic if needed
+      // but we're not currently using the scrolled state
     };
 
     window.addEventListener("scroll", handleScroll);
